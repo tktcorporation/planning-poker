@@ -5,7 +5,18 @@ ENV LC_ALL=C.UTF-8
 RUN apt-get update && \
     apt-get install -y \
     curl \
-    git
+    git \
+    sudo
+
+
+ENV UNAME=docker
+ENV GID=1000
+ENV UID=1000
+
+RUN groupadd -g $GID -o $UNAME
+RUN useradd -m -u $UID -g $GID -G sudo -o -s /bin/bash $UNAME
+RUN echo "$UNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
 
 RUN curl https://raw.githubusercontent.com/nektos/act/master/install.sh | bash
 
