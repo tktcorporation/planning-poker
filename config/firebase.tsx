@@ -23,7 +23,7 @@ interface Props {
   children: ReactNode;
 }
 
-export const FirebaseProvider = ({ children }: Props) => {
+export const FirebaseProvider = ({ children }: Props): JSX.Element => {
   const [state, setState] = useState({});
 
   if (process.env.NODE_ENV == "production") {

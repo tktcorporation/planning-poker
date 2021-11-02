@@ -1,25 +1,12 @@
 import React from "react";
 import Headroom from "react-headroom";
-import { Box, Link as RebassLink, Flex, Image } from "rebass/styled-components";
+import { Box, Flex } from "rebass/styled-components";
 import styled from "styled-components";
 import Link from "./Link";
 import { capitalize } from "../utils/string";
-import { BASE_URL, SECTION, TITLE } from "../utils/constants";
-import { getSectionHref } from "../utils/helpers";
-import { Logo } from "../../domain/Logo";
-
-const props = {
-  profile: {
-    bigIcon: {
-      alt: TITLE,
-      src: new Logo(BASE_URL).symbolUrl({ isPath: true, ext: "svg" }),
-    },
-  },
-};
+import { SECTION, TITLE } from "../utils/constants";
 
 const Header = (): JSX.Element => {
-  const { profile } = props;
-
   return (
     <StyledHeadroom>
       <Flex
@@ -28,18 +15,7 @@ const Header = (): JSX.Element => {
         alignItems="center"
         px={3}
       >
-        <RebassLink href={`#${getSectionHref(SECTION.home)}`} variant="empty">
-          <Flex justifyContent="center">
-            <Image
-              src={profile.bigIcon.src}
-              height={["60px", "80px"]}
-              width={["60px", "80px"]}
-              alt="Portfolio Logo"
-              p={2}
-              css={{ borderRadius: "20px", cursor: "pointer" }}
-            />
-          </Flex>
-        </RebassLink>
+        <Link href="/poker">{TITLE}</Link>
         <Flex mr={[0, 3, 5]}>
           {Object.keys(SECTION)
             .filter((id) => id !== "home")

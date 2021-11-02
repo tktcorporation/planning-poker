@@ -5,10 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { Fade } from "react-awesome-reveal";
 import Section from "../components/Section";
 import markdownRenderer from "../components/MarkdownRenderer";
-import { SECTION } from "../utils/constants";
-import { Twemb } from "../molecules/TwitterWidget";
 import Triangle from "../components/Triangle";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 const vision = `## Simple Planning`;
 
@@ -16,7 +13,7 @@ const purpose = `Plan simply`;
 
 const About: React.FC = () => {
   return (
-    <Section.Container Background={Background} id={SECTION.about}>
+    <Section.Container Background={Background}>
       <Link href="/poker">
         <a>
           <Section.Header name={"Planning Poker"} icon="" label="title" />
@@ -29,21 +26,6 @@ const About: React.FC = () => {
           </Fade>
           <Fade direction="down" triggerOnce>
             <ReactMarkdown source={purpose} renderers={markdownRenderer} />
-          </Fade>
-        </Box>
-
-        <Box
-          width={[1, 1, 2 / 5]}
-          style={{ maxWidth: "500px", margin: "auto" }}
-        >
-          <Fade direction="right" triggerOnce>
-            <TwitterTimelineEmbed
-              sourceType={"profile"}
-              screenName={"tktcorporation"}
-              noFooter
-              noHeader
-              options={{ height: 500 }}
-            ></TwitterTimelineEmbed>
           </Fade>
         </Box>
       </Flex>

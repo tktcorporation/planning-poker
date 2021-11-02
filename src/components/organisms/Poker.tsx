@@ -1,18 +1,12 @@
 import React from "react";
-import TextLoop from "react-text-loop";
 import Section from "../components/Section";
-import ScrollIcon from "../components/ScrollIcon";
 import Triangle from "../components/Triangle";
-import { SECTION } from "../utils/constants";
-import { getSectionHref } from "../utils/helpers";
 import Link from "next/link";
 import { Box, Heading, Button, Flex } from "rebass/styled-components";
 
-const centerHorizontally = { marginRight: "auto", marginLeft: "auto" };
-
 export const Poker = (): JSX.Element => {
   return (
-    <Section.Container id={SECTION.home} Background={Background}>
+    <Section.Container Background={Background}>
       <Flex alignItems="center" verticalAlign="center" px={3} py={4} bg="muted">
         <Heading>Hello</Heading>
         <Box mx="auto" />
