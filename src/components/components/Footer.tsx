@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
     socialLinks: [
       {
         name: "Twitter",
-        url: "https://twitter.com/ochakai_vrc",
+        url: "https://twitter.com/tktcorporation",
         icon: "twitter",
       },
     ] as Array<SocialLinkTypes & { invert: boolean }>,
