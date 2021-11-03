@@ -9,7 +9,7 @@
     "format": "prettier -w --write .",
     "lint:eslint": "eslint . --ext js,jsx,ts,tsx --max-warnings=5",
     "lint:prettier": "prettier --check .",
-    "all": "yarn lint:eslint && yarn format",
+    "all": "yarn format && yarn lint:eslint",
     "test": "jest"
   },
   "dependencies": {
