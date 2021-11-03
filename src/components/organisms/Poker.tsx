@@ -7,20 +7,6 @@ import { Box, Heading, Button, Flex } from "rebass/styled-components";
 export const Poker = (): JSX.Element => {
   return (
     <Section.Container Background={Background}>
-      <Flex alignItems="center" verticalAlign="center" px={3} py={4} bg="muted">
-        <Heading>Hello</Heading>
-        <Box mx="auto" />
-        <Box p={3} width={1 / 2} backgroundColor="primary">
-          Flex
-        </Box>
-        <Button>Beep</Button>
-        <Button ml={2} variant="secondary">
-          Boop
-        </Button>
-      </Flex>
-      <Flex alignItems="center" px={3} py={4} bg="muted">
-        <Link href="/">Home</Link>
-      </Flex>
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <Button>A</Button>
         <Button>B</Button>
@@ -49,12 +35,6 @@ const Background = () => (
       color="muted"
       height={["35vh", "80vh"]}
       width={["95vw", "60vw"]}
-    />
-
-    <Triangle
-      color="secondary"
-      height={["38vh", "80vh"]}
-      width={["50vw", "35vw"]}
     />
 
     <Triangle

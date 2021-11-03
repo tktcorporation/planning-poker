@@ -6,7 +6,7 @@ type Props = {
   onClick?: () => void;
 };
 
-const Link = styled.a<Props>`
+export const BottomBoarderLink = styled.a<Props>`
   text-decoration: none;
   position: relative;
   margin-bottom: 0;
@@ -38,5 +38,3 @@ const Link = styled.a<Props>`
     width: 100%;
   }
 `;
-
-export default Link;

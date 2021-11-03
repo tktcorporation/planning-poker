@@ -1,10 +1,9 @@
 import React from "react";
 import Headroom from "react-headroom";
-import { Box, Flex } from "rebass/styled-components";
+import { Flex } from "rebass/styled-components";
 import styled from "styled-components";
-import Link from "./Link";
-import { capitalize } from "../utils/string";
-import { SECTION, TITLE } from "../utils/constants";
+import { BottomBoarderLink } from "./BottomBoarderLink";
+import { TITLE } from "../utils/constants";
 
 const Header = (): JSX.Element => {
   return (
@@ -15,18 +14,7 @@ const Header = (): JSX.Element => {
         alignItems="center"
         px={3}
       >
-        <Link href="/poker">{TITLE}</Link>
-        <Flex mr={[0, 3, 5]}>
-          {Object.keys(SECTION)
-            .filter((id) => id !== "home")
-            .map((id) => (
-              <Box key={id} ml={[2, 3]} color="background" fontSize={[2, 3]}>
-                <Link href={`#${id}`} tabIndex={0}>
-                  {capitalize(id)}
-                </Link>
-              </Box>
-            ))}
-        </Flex>
+        <BottomBoarderLink href="/">{TITLE}</BottomBoarderLink>
       </Flex>
     </StyledHeadroom>
   );
