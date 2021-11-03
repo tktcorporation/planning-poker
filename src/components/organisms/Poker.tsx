@@ -1,8 +1,7 @@
 import React from "react";
-import Section from "../components/Section";
-import Triangle from "../components/Triangle";
-import Link from "next/link";
-import { Box, Heading, Button, Flex } from "rebass/styled-components";
+import { Section } from "../components/Section";
+import { Triangle } from "../components/Triangle";
+import { Box, Button, Flex } from "rebass/styled-components";
 
 export const Poker = (): JSX.Element => {
   return (

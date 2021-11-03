@@ -17,13 +17,13 @@ import "firebase/performance";
 //   firebase.initializeApp(firebaseConfig);
 // }
 
-export const FirebaseContext = createContext({});
+const FirebaseContext = createContext({});
 
 interface Props {
   children: ReactNode;
 }
 
-export const FirebaseProvider = ({ children }: Props): JSX.Element => {
+const FirebaseProvider = ({ children }: Props): JSX.Element => {
   const [state, setState] = useState({});
 
   if (process.env.NODE_ENV == "production") {
@@ -44,4 +44,7 @@ export const FirebaseProvider = ({ children }: Props): JSX.Element => {
   );
 };
 
-export default FirebaseProvider;
+export const Firebase = {
+  Provider: FirebaseProvider,
+  Context: FirebaseContext,
+};

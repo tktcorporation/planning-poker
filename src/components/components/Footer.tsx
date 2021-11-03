@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Text, Box, Flex } from "rebass/styled-components";
 import { Fade } from "react-awesome-reveal";
-import SocialLink from "./SocialLink";
+import { SocialLink } from "./SocialLink";
 import { TITLE } from "../utils/constants";
 import { SocialLink as SocialLinkTypes } from "../../types";
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const { name, socialLinks } = {
     name: TITLE,
     socialLinks: [
@@ -56,5 +56,3 @@ const FooterContainer = styled.div`
     }
   }
 `;
-
-export default Footer;

@@ -1,14 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import FirebaseProvider from "../../config/firebase";
+import { Firebase } from "../../config/firebase";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
-      <FirebaseProvider>
+      <Firebase.Provider>
         <Component {...pageProps} />
-      </FirebaseProvider>
+      </Firebase.Provider>
     </>
   );
 }
-export default MyApp;
+MyApp;

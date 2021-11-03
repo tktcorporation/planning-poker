@@ -45,4 +45,4 @@ const BORDER_RADIUS_MAP = {
   "bottom-left": `0 0 0 ${BORDER_RADIUS}`,
 };
 
-export default ImageLabel;
+ImageLabel;

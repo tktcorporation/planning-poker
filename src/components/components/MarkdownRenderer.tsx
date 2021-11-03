@@ -72,7 +72,8 @@ const MarkdownLink = ({ href, children }: LinkProps): JSX.Element => {
     </StyledLink>
   );
 };
-export default {
+
+export const MarkdownRenderer = {
   root: Root,
   paragraph: MarkdownParagraph,
   list: MarkdownList,

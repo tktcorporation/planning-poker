@@ -63,7 +63,7 @@ const SectionContainer = styled.div`
 
 const DefaultBackground = () => <div />;
 
-export default {
-  Container,
+export const Section = {
   Header,
+  Container,
 };

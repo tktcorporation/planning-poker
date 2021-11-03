@@ -13,4 +13,4 @@ const Hide = styled.div<Props>`
   })}
 `;
 
-export default Hide;
+Hide;

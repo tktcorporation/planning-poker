@@ -69,11 +69,9 @@ declare module "@rebass/preset" {
 }
 
 declare module "*.svg" {
-  const content: unknown;
-  export default content;
+  export const content: unknown;
 }
 
 declare module "*.json" {
-  const value: unknown;
-  export default value;
+  export const value: unknown;
 }

@@ -2,15 +2,15 @@ import React from "react";
 import { Box, Flex, Link as RebassLink } from "rebass/styled-components";
 import ReactMarkdown from "react-markdown";
 import { Fade } from "react-awesome-reveal";
-import Section from "../components/Section";
-import markdownRenderer from "../components/MarkdownRenderer";
-import Triangle from "../components/Triangle";
+import { Section } from "../components/Section";
+import { MarkdownRenderer } from "../components/MarkdownRenderer";
+import { Triangle } from "../components/Triangle";
 
 const vision = `## Simple Planning`;
 
 const purpose = `Plan simply`;
 
-const About: React.FC = () => {
+export const About: React.FC = () => {
   return (
     <Section.Container Background={Background}>
       <RebassLink href="/poker" variant="empty">
@@ -19,18 +19,16 @@ const About: React.FC = () => {
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <Box width={[1, 1, 3 / 5]} px={[2, 3, 4]} mt={2}>
           <Fade direction="down" triggerOnce>
-            <ReactMarkdown source={vision} renderers={markdownRenderer} />
+            <ReactMarkdown source={vision} renderers={MarkdownRenderer} />
           </Fade>
           <Fade direction="down" triggerOnce>
-            <ReactMarkdown source={purpose} renderers={markdownRenderer} />
+            <ReactMarkdown source={purpose} renderers={MarkdownRenderer} />
           </Fade>
         </Box>
       </Flex>
     </Section.Container>
   );
 };
-
-export default About;
 
 const Background = () => (
   <>

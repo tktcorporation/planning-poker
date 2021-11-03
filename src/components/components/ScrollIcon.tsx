@@ -72,4 +72,4 @@ const Scroll = styled.circle`
   fill: ${({ theme }) => theme.colors.primary};
 `;
 
-export default ScrollIcon;
+ScrollIcon;

@@ -125,4 +125,4 @@ const ProjectTag = styled.div`
   }
 `;
 
-export default Project;
+Project;

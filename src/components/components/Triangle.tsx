@@ -10,7 +10,7 @@ type Props = {
   height: ResponsiveProp<string>;
 };
 
-const Triangle = styled.div<Props>`
+export const Triangle = styled.div<Props>`
   position: absolute;
   width: 0;
   height: 0;
@@ -42,5 +42,3 @@ const Triangle = styled.div<Props>`
 `;
 
 const invertX = (x: string) => (x === "right" ? "left" : "right");
-
-export default Triangle;

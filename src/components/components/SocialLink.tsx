@@ -10,7 +10,12 @@ type Props = SocialLinkType & {
   invert?: boolean;
 };
 
-const SocialLink = ({ icon, name, url, invert }: Props): JSX.Element | null => {
+export const SocialLink = ({
+  icon,
+  name,
+  url,
+  invert,
+}: Props): JSX.Element | null => {
   const iconDefinition = getIconDefinition(icon);
   if (!iconDefinition) {
     return null;
@@ -46,5 +51,3 @@ const IconLink = styled(Link)<{ invert?: boolean }>`
     opacity: 0.7;
   }
 `;
-
-export default SocialLink;

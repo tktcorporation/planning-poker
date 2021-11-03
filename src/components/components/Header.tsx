@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { BottomBoarderLink } from "./BottomBoarderLink";
 import { TITLE } from "../utils/constants";
 
-const Header = (): JSX.Element => {
+export const Header = (): JSX.Element => {
   return (
     <StyledHeadroom>
       <Flex
@@ -32,5 +32,3 @@ const StyledHeadroom = styled(Headroom)`
   position: absolute;
   width: 100%;
 `;
-
-export default Header;
