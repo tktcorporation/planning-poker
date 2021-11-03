@@ -13,6 +13,16 @@ module.exports = {
     "react/prop-types": "off",
     "import/no-default-export": "error",
   },
+  overrides: [
+    // Next.js needs default exports for pages and API points
+    {
+      files: ["*/pages/*", "*/pages/api/*"],
+      rules: {
+        "import/no-default-export": "off",
+        "import/prefer-default-export": "error",
+      },
+    },
+  ],
   env: {
     browser: true,
     commonjs: true,
