@@ -16,7 +16,7 @@ module.exports = {
   overrides: [
     // Next.js needs default exports for pages and API points
     {
-      files: ["*/pages/*", "*/pages/api/*"],
+      files: ["*/pages/*", "*/pages/**/index.tsx", "*/pages/api/*"],
       rules: {
         "import/no-default-export": "off",
         "import/prefer-default-export": "error",
