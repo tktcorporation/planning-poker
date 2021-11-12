@@ -22,6 +22,13 @@ module.exports = {
         "import/prefer-default-export": "error",
       },
     },
+    // Storybook needs default exports
+    {
+      files: ["*/stories/*", "*/stories/**/index.tsx"],
+      rules: {
+        "import/no-default-export": "off",
+      },
+    },
   ],
   env: {
     browser: true,
