@@ -1,6 +1,6 @@
 import { Layout } from "../../components/components/Layout";
 import { Footer } from "../../components/components/Footer";
-import { Poker } from "./_internal/Poker";
+import { Poker } from "../../components/poker/Poker";
 import { Header } from "../../components/components/Header";
 
 export default function App(): JSX.Element {

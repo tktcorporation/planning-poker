@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Card } from "../pages/poker/_internal/Card";
+import { Card } from "../components/poker/Card";
 
 export default {
   title: "Poker/Card",

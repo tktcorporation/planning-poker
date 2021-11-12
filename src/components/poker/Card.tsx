@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, ButtonProps } from "rebass/styled-components";
-import { theme } from "../../../theme";
+import { Button } from "rebass/styled-components";
+import { ButtonProps } from "rebass";
+import { theme } from "../../theme";
 
 import {
   always,
@@ -46,12 +47,11 @@ const backGround = (selected: boolean, color: keyof typeof theme["colors"]) => {
   };
 };
 
-type CardProps = ButtonProps & {
+type CardProps = Omit<ButtonProps, "css"> & {
   n: number;
   borderColor: keyof typeof theme["colors"];
   selected: boolean;
 };
-
 export const Card = ({
   n,
   borderColor = "primary",
