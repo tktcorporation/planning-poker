@@ -1,7 +1,7 @@
 import React from "react";
-import SocialLink from "./SocialLink";
-import ImageLabel from "./ImageLabel";
-import Hide from "./Hide";
+import { SocialLink } from "./SocialLink";
+import { ImageLabel } from "./ImageLabel";
+import { Hide } from "./Hide";
 import { Box, Flex, Image, Text } from "rebass/styled-components";
 import styled from "styled-components";
 import { Project as ProjectType } from "../../types";

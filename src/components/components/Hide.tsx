@@ -5,12 +5,10 @@ type Props = {
   query: keyof Queries;
 };
 
-const Hide = styled.div<Props>`
+export const Hide = styled.div<Props>`
   ${({ query, theme }) => ({
     [theme.queries[query]]: {
       display: "none",
     },
   })}
 `;
-
-Hide;
