@@ -1,6 +1,6 @@
 export const TITLE = "Planning Poker";
 
-export const BASE_URL = "https://www.planning-poker.studio/";
+export const BASE_URL = "https://planning-poker-dun.vercel.app/";
 
 export enum SECTION {
   home = "Home",
