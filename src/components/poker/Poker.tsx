@@ -8,10 +8,15 @@ import { Cards } from "./Cards";
 export const Poker = (): JSX.Element => {
   return (
     <Section.Container Background={Background}>
-      <PokerTable></PokerTable>
-      <Flex marginTop="auto">
-        <Cards></Cards>
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        flexWrap="nowrap"
+        height="100%" // 効かない
+      >
+        <PokerTable></PokerTable>
       </Flex>
+      <Cards></Cards>
     </Section.Container>
   );
 };

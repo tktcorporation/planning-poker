@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Button, Flex, Heading } from "rebass/styled-components";
+import { Cards } from "./Cards";
 
 export const PokerTable = (): JSX.Element => {
   return (
@@ -25,6 +26,7 @@ export const PokerTable = (): JSX.Element => {
           </Heading>
         </Box>
       </Flex>
+      <Cards></Cards>
     </Box>
   );
 };
