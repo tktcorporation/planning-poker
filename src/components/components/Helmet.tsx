@@ -2,14 +2,11 @@ import React from "react";
 import { withTheme } from "styled-components";
 import { Theme } from "../../types";
 import Head from "next/head";
-import { Logo } from "../../domain/Logo";
 import { BASE_URL, TITLE } from "../utils/constants";
 
 type Props = {
   theme: Theme;
 };
-
-new Logo(BASE_URL).symbolUrl;
 
 const _Helmet = ({ theme }: Props) => {
   const { title, description, profile } = {
@@ -20,7 +17,7 @@ const _Helmet = ({ theme }: Props) => {
       bigIcon: { src },
       appleIcon: { src },
       favicon16: { src },
-    }))(new Logo(BASE_URL).symbolUrl({ isPath: false, ext: "png" })),
+    }))('vercel.svg'),
   };
 
   return (
