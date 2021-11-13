@@ -2,7 +2,7 @@ import React from "react";
 import { withTheme } from "styled-components";
 import { Theme } from "../../types";
 import Head from "next/head";
-import { BASE_URL, TITLE } from "../utils/constants";
+import { TITLE } from "../utils/constants";
 
 type Props = {
   theme: Theme;
@@ -17,7 +17,7 @@ const _Helmet = ({ theme }: Props) => {
       bigIcon: { src },
       appleIcon: { src },
       favicon16: { src },
-    }))('vercel.svg'),
+    }))("vercel.svg"),
   };
 
   return (
