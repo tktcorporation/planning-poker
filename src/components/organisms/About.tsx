@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Flex, Link as RebassLink } from "rebass/styled-components";
 import ReactMarkdown from "react-markdown";
 import { Fade } from "react-awesome-reveal";
-import { Section } from "../components/Section";
-import { MarkdownRenderer } from "../components/MarkdownRenderer";
-import { Triangle } from "../components/Triangle";
+import { Section } from "../molecules/Section";
+import { MarkdownRenderer } from "../molecules/MarkdownRenderer";
+import { Triangle } from "../molecules/Triangle";
 
 const vision = `## Simple Planning`;
 

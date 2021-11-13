@@ -1,6 +1,6 @@
 import React from "react";
-import { Section } from "../components/Section";
-import { Triangle } from "../components/Triangle";
+import { Section } from "../molecules/Section";
+import { Triangle } from "../molecules/Triangle";
 import { Flex } from "rebass/styled-components";
 import { PokerTable } from "./PokerTable";
 import { Cards } from "./Cards";
