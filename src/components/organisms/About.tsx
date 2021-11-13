@@ -13,9 +13,7 @@ const purpose = `Plan simply`;
 export const About: React.FC = () => {
   return (
     <Section.Container Background={Background}>
-      <RebassLink href="/poker" variant="empty">
-        <Section.Header name={"Planning Poker"} icon="" label="title" />
-      </RebassLink>
+      <Section.Header name={"Planning Poker"} icon="" label="title" href="/poker"/>
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <Box width={[1, 1, 3 / 5]} px={[2, 3, 4]} mt={2}>
           <Fade direction="down" triggerOnce>

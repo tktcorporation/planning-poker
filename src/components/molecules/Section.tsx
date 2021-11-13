@@ -27,12 +27,13 @@ type HeaderProps = {
   name: string;
   icon?: string;
   label?: string;
+  href?: string;
 };
 
-const Header = ({ name, icon, label }: HeaderProps): JSX.Element => (
+const Header = ({ name, icon, label, href }: HeaderProps): JSX.Element => (
   <Slide direction="left" triggerOnce>
     <Heading color="text" mb={4}>
-      <BottomBoarderLink selected>
+      <BottomBoarderLink selected href={href}>
         {name}
         {icon && (
           <span role="img" aria-label={label} style={{ marginLeft: "10px" }}>
