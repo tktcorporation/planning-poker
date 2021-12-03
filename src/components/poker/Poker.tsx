@@ -12,7 +12,7 @@ export const Poker = (): JSX.Element => {
         justifyContent="center"
         alignItems="center"
         flexWrap="nowrap"
-        height="100%" // 効かない
+        height="100%"
       >
         <PokerTable></PokerTable>
       </Flex>

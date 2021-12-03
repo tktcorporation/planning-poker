@@ -46,7 +46,7 @@ const Header = ({ name, icon, label, href }: HeaderProps): JSX.Element => (
 );
 
 const SectionContainer = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   min-width: 320px;
   max-width: 1366px;
   display: flex;
