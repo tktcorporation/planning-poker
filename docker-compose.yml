@@ -13,8 +13,5 @@ services:
       UID: 1000
     user: "1000:1000"
     tty: true
-    ports:
-      - 3000:3000
-      - 6006:6006
 volumes:
   node_modules:
