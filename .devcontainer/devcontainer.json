@@ -20,16 +20,13 @@
 
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
-	"editorconfig.editorconfig",
-	"github.copilot",
-	"naumovs.color-highlight"
-],
+    "editorconfig.editorconfig",
+    "github.copilot",
+    "naumovs.color-highlight"
+  ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [
-    "3003:3000",
-    "6006:6006",
-  ],
+  "forwardPorts": ["3003:3000", "6006:6006"],
 
   // Uncomment the next line if you want start specific services in your Docker Compose config.
   // "runServices": [],
