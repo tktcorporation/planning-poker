@@ -1,12 +1,12 @@
 import { useState } from "react";
 export interface ListItem {
   id: number;
-  value: string | number;
+  value: number;
   selected: boolean;
 }
 class SelectList {
   private list: ListItem[];
-  constructor(list: (number | string)[]) {
+  constructor(list: number[]) {
     this.list = list.map((item, i) => {
       return {
         id: i,
@@ -48,7 +48,7 @@ class SelectList {
 }
 
 export const useSelectOne = (
-  list: (number | string)[]
+  list: number[]
 ): {
   selectList: ListItem[];
   selectOne: (id: number) => void;

@@ -6,6 +6,9 @@ import { PokerTable } from "./PokerTable";
 import { HandBox } from "./HandBox";
 
 export const Poker = (): JSX.Element => {
+  const [selectedNumber, setSelectedNumber] = React.useState<number | null>(
+    null
+  );
   return (
     <Section.Container Background={Background}>
       <Flex
@@ -14,9 +17,15 @@ export const Poker = (): JSX.Element => {
         flexWrap="nowrap"
         height="100%"
       >
-        <PokerTable></PokerTable>
+        <PokerTable selectedNumber={selectedNumber} />
       </Flex>
-      <HandBox list={[1, 2, 3]} backgroundColor={"white"} />
+      <HandBox
+        list={[0, 0.5, 1, 2, 3, 5, 8, 13, 20, 40, 100]}
+        backgroundColor={"white"}
+        onChangeSelected={(selected) =>
+          setSelectedNumber(selected?.value ?? null)
+        }
+      />
     </Section.Container>
   );
 };

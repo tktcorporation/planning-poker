@@ -1,15 +1,15 @@
 import React from "react";
-import { Box, Button, Flex, Heading } from "rebass/styled-components";
-import { Cards } from "./Cards";
+import { Box, Flex, Heading } from "rebass/styled-components";
+import { CardWithName } from "./CardWithName";
 
-export const PokerTable = (): JSX.Element => {
+interface Props {
+  selectedNumber: number | null;
+}
+export const PokerTable = ({ selectedNumber }: Props): JSX.Element => {
   return (
     <Box>
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <Button>A</Button>
-        <Button>B</Button>
-        <Button>C</Button>
-        <Button>D</Button>
+        <CardWithName name={"Smith"} selectedNumber={selectedNumber} />
       </Flex>
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <Box
@@ -22,11 +22,10 @@ export const PokerTable = (): JSX.Element => {
           }}
         >
           <Heading textAlign="center" fontSize={[2, 3]}>
-            Pick your card!
+            {selectedNumber === null ? "Pick your card!" : "Open!"}
           </Heading>
         </Box>
       </Flex>
-      <Cards list={[1, 2, 3, 4]} />
     </Box>
   );
 };
