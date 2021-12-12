@@ -26,7 +26,7 @@ export const PokerTable = (): JSX.Element => {
           </Heading>
         </Box>
       </Flex>
-      <Cards></Cards>
+      <Cards list={[1, 2, 3, 4]} />
     </Box>
   );
 };

@@ -16,7 +16,7 @@ export const Poker = (): JSX.Element => {
       >
         <PokerTable></PokerTable>
       </Flex>
-      <Cards></Cards>
+      <Cards list={[1, 2, 3]} />
     </Section.Container>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "rebass/styled-components";
 import { ButtonProps } from "rebass";
 import { theme } from "../../theme";
+import styled from "styled-components";
 
 import {
   always,
@@ -44,16 +45,17 @@ const backGround = (selected: boolean, color: keyof typeof theme["colors"]) => {
     "&:hover": {
       backgroundColor: applyAlpha(themeColor, 0.1),
     },
+    transition: "background-color 0.2s ease-in-out",
   };
 };
 
 type CardProps = Omit<ButtonProps, "css"> & {
-  n: number;
+  text: string | number;
   borderColor: keyof typeof theme["colors"];
   selected: boolean;
 };
 export const Card = ({
-  n,
+  text,
   borderColor = "primary",
   selected,
   ...props
@@ -63,16 +65,55 @@ export const Card = ({
       {...props}
       sx={{
         ...backGround(selected, borderColor),
-        borderRadius: 3,
+        borderRadius: 10,
         borderWidth: "2px",
         borderStyle: "solid",
         borderColor: theme.colors[borderColor],
         cursor: "pointer",
+        padding: "22px 15px",
       }}
       alignContent="baseline"
       alignItems="center"
+      fontSize={[3, 4, 5]}
+      fontWeight="bold"
     >
-      {n}
+      {text}
     </Button>
   );
+};
+
+// export const PopCard = styled(Card).attrs(
+//   ({ text, borderColor, selected }: CardProps) => ({
+//     text,
+//     borderColor,
+//     selected,
+//   })
+// )`
+//   vertical-align: top;
+//   transition: all .1s ease-in-out;
+//   &:hover {
+//     margin-top: -5px;
+//   }
+//   margin-top: ${selected ? "0px" : "-10px"};
+// `;
+export const PopCard = ({
+  text,
+  borderColor = "primary",
+  selected,
+  ...props
+}: CardProps): JSX.Element => {
+  const StyledCard = styled(Card).attrs({
+    text,
+    borderColor,
+    selected,
+    ...props,
+  })`
+    vertical-align: top;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      margin-top: -5px;
+    }
+    ${selected ? "margin-top: -10px" : ""};
+  `;
+  return <StyledCard />;
 };

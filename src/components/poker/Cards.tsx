@@ -1,23 +1,25 @@
 import React from "react";
-import { Box, Flex } from "rebass/styled-components";
-import { Card } from "./Card";
+import { PopCard } from "./Card";
+import styled from "styled-components";
 
-export const Cards = (): JSX.Element => {
-  return (
-    <Box>
-      <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <Box>
-          <Card
-            n={1}
-            borderColor={"primary"}
-            selected={false}
-            marginX={3}
-          ></Card>
-          <Card n={1} borderColor={"primary"} selected={false}></Card>
-          <Card n={1} borderColor={"primary"} selected={true}></Card>
-          <Card n={1} borderColor={"primary"} selected={false}></Card>
-        </Box>
-      </Flex>
-    </Box>
-  );
+interface Props {
+  list: number[];
+}
+export const Cards = ({ list }: Props): JSX.Element => {
+  const StyledPopCard = styled(PopCard).attrs(
+    ({ text, borderColor, selected }: Parameters<typeof PopCard>[0]) => ({
+      text,
+      borderColor,
+      selected,
+    })
+  )`
+    margin-right: 10px;
+  `;
+  const cardItems = list.map((text) => (
+    <li key={text} style={{ display: "inline-block", margin: 0 }}>
+      <StyledPopCard text={text} borderColor={"primary"} selected={false} />
+    </li>
+  ));
+
+  return <ul style={{ margin: 0 }}>{cardItems}</ul>;
 };

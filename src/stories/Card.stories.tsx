@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  n: 1,
+  text: 1,
   borderColor: "primary",
   selected: false,
 };
