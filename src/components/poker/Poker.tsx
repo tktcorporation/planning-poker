@@ -3,7 +3,7 @@ import { Section } from "../molecules/Section";
 import { Triangle } from "../molecules/Triangle";
 import { Flex } from "rebass/styled-components";
 import { PokerTable } from "./PokerTable";
-import { Cards } from "./Cards";
+import { HandBox } from "./HandBox";
 
 export const Poker = (): JSX.Element => {
   return (
@@ -16,7 +16,7 @@ export const Poker = (): JSX.Element => {
       >
         <PokerTable></PokerTable>
       </Flex>
-      <Cards list={[1, 2, 3]} />
+      <HandBox list={[1, 2, 3]} backgroundColor={"white"} />
     </Section.Container>
   );
 };

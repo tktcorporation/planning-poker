@@ -82,20 +82,6 @@ export const Card = ({
   );
 };
 
-// export const PopCard = styled(Card).attrs(
-//   ({ text, borderColor, selected }: CardProps) => ({
-//     text,
-//     borderColor,
-//     selected,
-//   })
-// )`
-//   vertical-align: top;
-//   transition: all .1s ease-in-out;
-//   &:hover {
-//     margin-top: -5px;
-//   }
-//   margin-top: ${selected ? "0px" : "-10px"};
-// `;
 export const PopCard = ({
   text,
   borderColor = "primary",
@@ -110,10 +96,13 @@ export const PopCard = ({
   })`
     vertical-align: top;
     transition: all 0.1s ease-in-out;
-    &:hover {
-      margin-top: -5px;
-    }
-    ${selected ? "margin-top: -10px" : ""};
+    ${selected
+      ? "margin-top: -10px"
+      : `
+      &:hover {
+        margin-top: -5px;
+      }
+    `};
   `;
   return <StyledCard />;
 };
