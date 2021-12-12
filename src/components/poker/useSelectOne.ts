@@ -4,7 +4,7 @@ interface ListItem {
   value: string | number;
   selected: boolean;
 }
-class CardList {
+class SelectList {
   private list: ListItem[];
   constructor(list: (number | string)[]) {
     this.list = list.map((item, i) => {
@@ -16,9 +16,9 @@ class CardList {
     });
   }
   static createFrom(list: ListItem[]) {
-    const cardList = new CardList([]);
-    cardList.list = list;
-    return cardList;
+    const instance = new SelectList([]);
+    instance.list = list;
+    return instance;
   }
   selectOne(id: number) {
     this.list.forEach((item) => {
@@ -41,36 +41,40 @@ class CardList {
   getList() {
     return this.list;
   }
+  getSelected(): ListItem | null {
+    const selected = this.list.find((item) => item.selected);
+    return selected ? selected : null;
+  }
 }
 
 export const useSelectOne = (
   list: (number | string)[]
 ): {
-  cardList: ListItem[];
+  selectList: ListItem[];
   selectOne: (id: number) => void;
   toggleOne: (id: number) => void;
 } => {
-  const initialCardList = new CardList(list).getList();
-  const [cardList, setCardList] = useState(initialCardList);
+  const initialList = new SelectList(list).getList();
+  const [selectList, setSelectList] = useState(initialList);
   const selectOne = (id: number) => {
-    setCardList((cardList) => {
-      const newCardList = CardList.createFrom(cardList);
-      newCardList.selectOne(id);
-      cardList = [...newCardList.getList()];
-      return cardList;
+    setSelectList((selectList) => {
+      const newSelectList = SelectList.createFrom(selectList);
+      newSelectList.selectOne(id);
+      selectList = [...newSelectList.getList()];
+      return selectList;
     });
   };
   const toggleOne = (id: number) => {
-    setCardList((cardList) => {
-      const newCardList = CardList.createFrom(cardList);
+    setSelectList((slectList) => {
+      const newCardList = SelectList.createFrom(slectList);
       newCardList.toggleOne(id);
-      cardList = [...newCardList.getList()];
-      return cardList;
+      slectList = [...newCardList.getList()];
+      return slectList;
     });
   };
   return {
     selectOne,
     toggleOne,
-    cardList,
+    selectList,
   };
 };

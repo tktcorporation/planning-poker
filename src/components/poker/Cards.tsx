@@ -17,8 +17,8 @@ export const Cards = ({ list }: Props): JSX.Element => {
   )`
     margin-right: 10px;
   `;
-  const { cardList, toggleOne } = useSelectOne(list);
-  const cardItems = cardList.map((card) => (
+  const { selectList, toggleOne } = useSelectOne(list);
+  const cardItems = selectList.map((card) => (
     <li key={card.id} style={{ display: "inline-block", margin: 0 }}>
       <StyledPopCard
         onClick={() => toggleOne(card.id)}
