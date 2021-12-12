@@ -1,5 +1,5 @@
 import { useState } from "react";
-interface ListItem {
+export interface ListItem {
   id: number;
   value: string | number;
   selected: boolean;
