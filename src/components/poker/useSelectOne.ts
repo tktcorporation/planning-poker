@@ -45,11 +45,11 @@ class CardList {
 
 export const useSelectOne = (
   list: (number | string)[]
-): ((list: (number | string)[]) => {
+): {
+  cardList: ListItem[];
   selectOne: (id: number) => void;
   toggleOne: (id: number) => void;
-  cardList: ListItem[];
-}) => {
+} => {
   const initialCardList = new CardList(list).getList();
   const [cardList, setCardList] = useState(initialCardList);
   const selectOne = (id: number) => {
