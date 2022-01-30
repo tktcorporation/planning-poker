@@ -8,14 +8,17 @@ interface Props {
 export const CardWithName = ({ name, selectedNumber }: Props): JSX.Element => {
   return (
     <div>
-      <div>
-        <Text>{name}</Text>
+      {/* align vertical */}
+      <div style={{
+        textAlign: "center",
+      }}>
+        <Card
+          text={selectedNumber === null ? "?" : selectedNumber}
+          borderColor={"primary"}
+          selected={selectedNumber !== null}
+        />
+        <Text fontSize={[1, 2]}>{name}</Text>
       </div>
-      <Card
-        text={selectedNumber === null ? "?" : selectedNumber}
-        borderColor={"primary"}
-        selected={selectedNumber !== null}
-      />
     </div>
   );
 };
