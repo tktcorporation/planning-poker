@@ -11,6 +11,7 @@
     "lint:prettier": "prettier --check .",
     "all": "yarn format && yarn lint:eslint --fix",
     "test": "jest",
+    "ci": "yarn lint:prettier && yarn lint:eslint && yarn test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

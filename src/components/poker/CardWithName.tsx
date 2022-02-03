@@ -9,9 +9,11 @@ export const CardWithName = ({ name, selectedNumber }: Props): JSX.Element => {
   return (
     <div>
       {/* align vertical */}
-      <div style={{
-        textAlign: "center",
-      }}>
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
         <Card
           text={selectedNumber === null ? "?" : selectedNumber}
           borderColor={"primary"}

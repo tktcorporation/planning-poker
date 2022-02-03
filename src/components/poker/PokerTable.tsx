@@ -7,7 +7,10 @@ interface Props {
   selectedNumber: number | null;
   planList: PlanList;
 }
-export const PokerTable = ({ selectedNumber, planList }: Props): JSX.Element => {
+export const PokerTable = ({
+  selectedNumber,
+  planList,
+}: Props): JSX.Element => {
   const cards = planList.getPlans().map((plan, index) => (
     <li key={index + 1} style={{ display: "inline-block", margin: 0 }}>
       <CardWithName

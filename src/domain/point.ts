@@ -9,7 +9,7 @@ export class Planner {
 export class Plan {
   constructor(
     public readonly planner: Planner,
-    public readonly points: Point,
+    public readonly points: Point
   ) {}
 }
 

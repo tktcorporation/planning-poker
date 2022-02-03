@@ -6,7 +6,6 @@ import { PokerTable } from "./PokerTable";
 import { HandBox } from "./HandBox";
 import { PlanList } from "../../domain/point";
 
-
 interface Props {
   planList: PlanList;
 }
